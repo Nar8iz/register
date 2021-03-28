@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+    
+    <div class="bg-img">
+        <div class="content">
+            <header>Turkuaz</header>
+            <h4>Hesabı oluşturun</h4>
+            <form action="#">
+                <div class="person">                    
+                        <div class="field" >                
+                            <input type="text" required placeholder="Ad" >   
+                        </div>                     
+                        <div class="field">
+                            <input type="text" required placeholder="Soyad">
+                        </div>
+                                    
+                </div>
+                <div class="field">
+                    <span></span>
+                    <input type="text" required placeholder="E-Posta">
+                </div>
+
+                <div class="field">
+                    <input type="password" required placeholder="Şifre">
+                    <span class="show">Göster</span>
+                </div>
+
+                <div class="field">
+                    <span></span>
+                    <input type="password" required placeholder="Şifrenizi tekrar yazın">
+                    <span class="show">Göster</span>
+                </div>
+
+                    <div class="checkbox">
+                            <input type="checkbox" value="">                            
+                       <a href="#"> Turkuaz Kullanıcı Sözleşme</a>`sini okudum, kabul ediyorum.</div>
+                    
+                       <div class="space ">                       
+                        <i class="fab fa-long-arrow-alt-right-lg"></i>
+                        <input type="submit" value=&#10142> 
+                    </div>
+
+
+                    
+                                                        
+                </div>                           
+                   
+            </form>
+        </div>
+    </div>
+    <script>
+        
+        const pass_field = document.querySelector('.password');
+        const show_btn = document.querySelector('.show');
+        show_btn.addEventListener('click', function(){
+            if(pass_field.type === "password"){
+                pass_field.type ="text";
+                show_btn.style.color ="#3498db";
+                show_btn.textContent ="Gizle";
+            } else {
+                pass_field.type= "password";                
+                show_btn.style.color ="#222";                
+                show_btn.textContent ="Göster";
+            }
+        });
+    </script>
+</body>
+</html>
